@@ -25,11 +25,11 @@
     <script>
       const hideFullScreenButton = "Yes";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/CR_01.loader.js";
+      const loaderUrl = buildUrl + "/CR_02.loader.js";
       const config = {
-        dataUrl: buildUrl + "/CR_01.data.unityweb",
-        frameworkUrl: buildUrl + "/CR_01.framework.js.unityweb",
-        codeUrl: buildUrl + "/CR_01.wasm.unityweb",
+        dataUrl: buildUrl + "/CR_02.data.unityweb",
+        frameworkUrl: buildUrl + "/CR_02.framework.js.unityweb",
+        codeUrl: buildUrl + "/CR_02.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "CroquetRecorder",
@@ -88,5 +88,25 @@
       };
       document.body.appendChild(script);
     </script>
+	<script>
+document.addEventListener('touchstart', function (e) {
+    if (e.touches.length > 1) {
+        e.preventDefault(); // prevent pinch zoom
+    }
+}, { passive: false });
+
+document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('gesturechange', function (e) {
+    e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('gestureend', function (e) {
+    e.preventDefault();
+}, { passive: false });
+</script>
+
   </body>
 </html>
